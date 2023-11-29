@@ -9,7 +9,21 @@ import SwiftUI
 
 struct LandmarkList: View {
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        // 세로 방향 리스트(정적 뷰)
+        /*List {
+            LandmarkRow(landmark: landmarks[0])
+            LandmarkRow(landmark: landmarks[1])
+        }*/
+                
+        // 세로 방향 리스트(동적 뷰) - Landmark에 Identifiable 프로토콜을 정의하지 않은 경우
+        /*List(landmarks, id: \.id) { landmark in
+            LandmarkRow(landmark: landmark)
+        }*/
+                
+        // 세로 방향 리스트(동적 뷰) - Landmark에 Identifiable 프로토콜을 정의한 경우
+        List(landmarks) { landmark in
+            LandmarkRow(landmark: landmark)
+        }
     }
 }
 

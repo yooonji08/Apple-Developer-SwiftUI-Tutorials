@@ -10,7 +10,7 @@ import SwiftUI
 import CoreLocation
 
 // Identifiable 프로토콜 - 데이터를 읽을 때 디코딩하기 위함
-struct Landmark: Hashable, Codable {
+struct Landmark: Hashable, Codable, Identifiable {
     var id: Int
     var name: String
     var park: String
