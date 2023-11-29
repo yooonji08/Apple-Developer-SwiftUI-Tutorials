@@ -8,11 +8,20 @@
 import SwiftUI
 
 struct LandmarkRow: View {
+    var landmark: Landmark // Landmark class 객체 변수
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        HStack {
+            landmark.image
+                .resizable() // 해상도에 맞게 이미지 크기를 조정
+                .frame(width: 50, height: 50) // 너비 50, 높이 50
+            Text(landmark.name)
+            
+            Spacer() // 공백
+        }
     }
 }
 
 #Preview {
-    LandmarkRow()
+    LandmarkRow(landmark: landmarks[0]) // landmarkData파일에 있는 첫번째 json의 값을 가져옴
 }
