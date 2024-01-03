@@ -31,6 +31,7 @@ struct LandmarkDetail: View {
                     Text("California")
                 }
                 // VStack전체에 대하여 한번에 폰트, 색상을 설정
+                // secondary는 gray색
                 .font(.subheadline)
                 .foregroundStyle(.secondary)
                 
@@ -42,7 +43,7 @@ struct LandmarkDetail: View {
             }
             .padding()
             
-            // 전체 VStack콘텐츠를 화면 상단으로 올려주기 위스페이서
+            // 전체 VStack콘텐츠를 화면 상단으로 올려주기 위한 스페이서
             Spacer()
         }
     }
