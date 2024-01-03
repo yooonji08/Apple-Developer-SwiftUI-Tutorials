@@ -19,10 +19,15 @@ struct LandmarkList: View {
         /*List(landmarks, id: \.id) { landmark in
             LandmarkRow(landmark: landmark)
         }*/
-                
-        // 세로 방향 리스트(동적 뷰) - Landmark에 Identifiable 프로토콜을 정의한 경우
-        List(landmarks) { landmark in
-            LandmarkRow(landmark: landmark)
+        
+        // 
+        NavigationSplitView {
+            // 세로 방향 리스트(동적 뷰) - Landmark에 Identifiable 프로토콜을 정의한 경우
+            List(landmarks) { landmark in
+                LandmarkRow(landmark: landmark)
+            }
+        } detail: {
+            Text("Select a Landmark")
         }
     }
 }
