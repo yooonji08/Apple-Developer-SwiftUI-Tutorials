@@ -11,11 +11,14 @@ import CoreLocation
 
 // Identifiable 프로토콜 - 데이터를 읽을 때 디코딩하기 위함
 struct Landmark: Hashable, Codable, Identifiable {
+    // 다음 변수들은 lanmarkData파일에 있는 변수명(키 값)과 똑같아야 함
+    // 변수명이 똑같아야 키 값에 따른 value 값을 읽을 수 있음
     var id: Int
     var name: String
     var park: String
     var state: String
     var description: String
+    var isFavorite: Bool // 별 표시 o or x
     
     // 이미지 변수
     private var imageName: String

@@ -18,6 +18,13 @@ struct LandmarkRow: View {
             Text(landmark.name)
                     
             Spacer() // 공백
+            
+            // 별 표시
+            // 시스템 내장 이미지(?)는 벡터 이미지임 => 색상 변경 가능
+            if landmark.isFavorite {
+                Image(systemName: "star.fill")
+                    .foregroundStyle(.yellow)
+            }
         }
     }
 }
