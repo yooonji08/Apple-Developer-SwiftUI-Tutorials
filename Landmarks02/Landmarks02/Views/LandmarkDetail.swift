@@ -8,27 +8,30 @@
 import SwiftUI
 
 struct LandmarkDetail: View {
+    var landmark: Landmark
+    
+    // ContentView에 있는 코드를 가져옴
     var body: some View {
-        // ContentView에 있는 코드를 가져옴
-        VStack {
+        // 화면 스크롤을 가능하게 해줌
+        ScrollView {
             // MapView 불러오고, 높이 300
             // 높이 지정을 안하면, 화면 전체에 MapView를 띄움
-            MapView()
+            MapView(coordinate: landmark.locationCoordinate)
                 .frame(height: 300)
             
             // 원형 이미지의 높이가 -130, padding을 하단-130
             // 이미지를 위쪽으로 이동하여 텍스트를 위한 공간을 만듦
-            CircleImage()
+            CircleImage(image: landmark.image)
                 .offset(y: -130)
                 .padding(.bottom, -130)
             
             VStack(alignment: .leading) {
-                Text("Turtle Rock")
+                Text(landmark.name)
                     .font(.title)
                 HStack {
-                    Text("Joshua Tree National Park")
+                    Text(landmark.name)
                     Spacer()
-                    Text("California")
+                    Text(landmark.state)
                 }
                 // VStack전체에 대하여 한번에 폰트, 색상을 설정
                 // secondary는 gray색
@@ -37,18 +40,18 @@ struct LandmarkDetail: View {
                 
                 Divider() // 구분선
                 
-                Text("About Turtle Rock")
+                Text("About \(landmark.name)")
                     .font(.title2)
-                Text("Descriptive text goes here.")
+                Text(landmark.description)
             }
             .padding()
-            
-            // 전체 VStack콘텐츠를 화면 상단으로 올려주기 위한 스페이서
-            Spacer()
         }
+        // 가장 상단의 툴바 이름을 각 랜드마크 이름으로 지정함
+        .navigationTitle(landmark.name)
+        .navigationBarTitleDisplayMode(.inline)
     }
 }
 
 #Preview {
-    LandmarkDetail()
+    LandmarkDetail(landmark: landmarks[0])
 }

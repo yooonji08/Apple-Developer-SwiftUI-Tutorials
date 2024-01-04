@@ -25,7 +25,7 @@ struct LandmarkList: View {
             // 세로 방향 리스트(동적 뷰) - Landmar    Identifiable 프로토콜을 정의한 경우
             List(landmarks) { landmark in
                 NavigationLink { // 각 행을 링크로 연결
-                    LandmarkDetail() // 각 행을 클릭하면 세부 화면으로 이동
+                    LandmarkDetail(landmark: landmark) // 각 행을 클릭하면 세부 화면으로 이동
                 } label: { // 리스트에 들어갈 정보를 담음
                     LandmarkRow(landmark: landmark)
                 }
