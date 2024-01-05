@@ -10,6 +10,7 @@ import SwiftUI
 struct LandmarkList: View {
     // 별 표시한 랜드마크만 볼지 말지에 대한 여부를 지정하는 변수
     // 변수의 값을 true로 바꾸면, 별 표시가 되어 있는 랜드마크만 리스트로 띄워줌
+    // MARK: 내부 파일에서 사용 가능함, false이면 뷰가 사라지고, true이면 뷰를 만듦.
     @State private var showFavoritesOnly = false
     
     // 속성과 값을 확인하여 랜드마크 목록의 필터링된 버전(별 표시가 있는 것)을 계산함
@@ -38,7 +39,7 @@ struct LandmarkList: View {
                 // 토글 추가하기
                 // showFavoritesOnly변수가 true이면 별표시된 랜드마크만 표시
                 // showFavoritesOnly변수가 false이면 모든 랜드마크 표시
-                // 변수를 직접사용하려면 {$변수명}처럼 사용하기
+                // 변수를 직접사용하려면 {$변수명}처럼 사용하기 => binding형태로 사용 중
                 Toggle(isOn: $showFavoritesOnly) {
                     Text("Favorites only")
                 }
