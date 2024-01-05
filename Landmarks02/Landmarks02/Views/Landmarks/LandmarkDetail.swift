@@ -8,10 +8,21 @@
 import SwiftUI
 
 struct LandmarkDetail: View {
+    // MARK: 전역 변수
+    @Environment(ModelData.self) var modelData
+    
     var landmark: Landmark
+    
+    // ???: landmark의 id값과 리스트에 있는 랜드마크의 position id값 비교
+    var landmarkIndex: Int {
+        modelData.landmarks.firstIndex(where: { $0.id == landmark.id})!
+    }
     
     // ContentView에 있는 코드를 가져옴
     var body: some View {
+        // Bindable wrapper를 사용하여 body내부에 프로퍼티 추가
+        @Bindable var modelData = modelData
+        
         // 화면 스크롤을 가능하게 해줌
         ScrollView {
             // MapView 불러오고, 높이 300
@@ -26,10 +37,15 @@ struct LandmarkDetail: View {
                 .padding(.bottom, -130)
             
             VStack(alignment: .leading) {
-                Text(landmark.name)
-                    .font(.title)
+                // 별 표시 버튼 추가하기
                 HStack {
                     Text(landmark.name)
+                        .font(.title)
+                    FavoriteButton(isSet: $modelData.landmarks[landmarkIndex].isFavorite)
+                }
+                
+                HStack {
+                    Text(landmark.park)
                     Spacer()
                     Text(landmark.state)
                 }
@@ -53,5 +69,7 @@ struct LandmarkDetail: View {
 }
 
 #Preview {
-    LandmarkDetail(landmark: ModelData().landmarks[0])
+    let modelData = ModelData()
+    return LandmarkDetail(landmark: ModelData().landmarks[0])
+        .environment(modelData)
 }
