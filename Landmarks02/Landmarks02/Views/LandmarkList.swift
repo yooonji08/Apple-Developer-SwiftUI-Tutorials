@@ -13,6 +13,7 @@ struct LandmarkList: View {
     @State private var showFavoritesOnly = false
     
     // 속성과 값을 확인하여 랜드마크 목록의 필터링된 버전(별 표시가 있는 것)을 계산함
+    // ???: 다시 확인해보기
     var filteredLandmarks: [Landmark] {
         landmarks.filter { landmark in
             (!showFavoritesOnly || landmark.isFavorite)
@@ -33,13 +34,25 @@ struct LandmarkList: View {
         
         NavigationSplitView {
             // 세로 방향 리스트(동적 뷰) - Landmar    Identifiable 프로토콜을 정의한 경우
-            List(filteredLandmarks) { landmark in
-                NavigationLink { // 각 행을 링크로 연결
-                    LandmarkDetail(landmark: landmark) // 각 행을 클릭하면 세부 화면으로 이동
-                } label: { // 리스트에 들어갈 정보를 담음
-                    LandmarkRow(landmark: landmark)
+            List {
+                // 토글 추가하기
+                // showFavoritesOnly변수가 true이면 별표시된 랜드마크만 표시
+                // showFavoritesOnly변수가 false이면 모든 랜드마크 표시
+                // 변수를 직접사용하려면 {$변수명}처럼 사용하기
+                Toggle(isOn: $showFavoritesOnly) {
+                    Text("Favorites only")
+                }
+                // 리스트를 중첩으로 만들 때 사용하는 ForEach구문
+                ForEach(filteredLandmarks) { landmark in
+                    NavigationLink { // 각 행을 링크로 연결
+                        LandmarkDetail(landmark: landmark) // 각 행을 클릭하면 세부 화면으로 이동
+                    } label: { // 리스트에 들어갈 정보를 담음
+                        LandmarkRow(landmark: landmark)
+                    }
                 }
             }
+            // MARK: filteredLandmarks 변수 값이 변경되면(토글 on/off 여부에 따라서) 애니메이션 실행
+            .animation(.default, value: filteredLandmarks)
             .navigationTitle("Landmarks") // 리스트의 상단에 title 지정
         } detail: {
             Text("Select a Landmark")
