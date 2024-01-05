@@ -41,7 +41,8 @@ struct LandmarkRow: View {
 // Group - 콘텐츠를 그룹화해주는 컨테이너
 // 캔버스에 하나의 미리보기로 쌓인 그룹의 하위 뷰를 렌더링해줌
 #Preview {
-    Group {
+    let landmarks = ModelData().landmarks
+    return Group {
         LandmarkRow(landmark: landmarks[0])
         LandmarkRow(landmark: landmarks[1])
     }

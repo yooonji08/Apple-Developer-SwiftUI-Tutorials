@@ -10,7 +10,7 @@ import Foundation
 // MARK: Observable을 사용하여, 프로퍼티의 변경사항을 확인하고, 프로퍼티가 변경될 때만 ui가 업데이트되도록 함 => 성능 향상, like 매크로
 @Observable
 class ModelData {
-    var landmarks: [Landmark] = load("landmarkData.json")
+    var landmarks: [Landmark] = load("landmarkData.json")
 }
 
 // 지정된 이름으로 JSON데이터를 가져오는 메서드
