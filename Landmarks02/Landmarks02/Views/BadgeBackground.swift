@@ -10,7 +10,6 @@ import SwiftUI
 // 육각형 모양을 뷰로 그리기
 struct BadgeBackground: View {
     var body: some View {
-        
         GeometryReader { geometry in
             // 100 x 100 픽셀로 가정
             Path { path in
@@ -27,7 +26,7 @@ struct BadgeBackground: View {
                         y: height * (0.20 + HexagonParameters.adjustment)
                     )
                 )
-                
+
                 // 단일 점 정보를 가져와서 이전 정보를 참고하여 계속 그림
                 // addLine으로 새 지점의 점을 연속 호출
                 HexagonParameters.segments.forEach { segment in
@@ -37,12 +36,12 @@ struct BadgeBackground: View {
                             y: height * segment.line.y
                         )
                     )
-                    
+
                     // 육각형의 모서리에 곡선 그리기
                     path.addQuadCurve(
                         to: CGPoint(
-                            x: width + segment.curve.x + xOffset,
-                            y: height + segment.curve.y
+                            x: width * segment.curve.x + xOffset,
+                            y: height * segment.curve.y
                         ),
                         control: CGPoint(
                             x: width * segment.control.x + xOffset,
