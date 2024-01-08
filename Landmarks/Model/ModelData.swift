@@ -11,6 +11,7 @@ import Foundation
 @Observable
 class ModelData {
     var landmarks: [Landmark] = load("landmarkData.json")
+    var hikes: [Hike] = load("hikeData.json")
 }
 
 // 지정된 이름으로 JSON데이터를 가져오는 메서드
