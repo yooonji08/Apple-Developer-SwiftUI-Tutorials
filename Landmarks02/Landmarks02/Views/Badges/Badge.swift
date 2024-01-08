@@ -19,6 +19,7 @@ struct Badge: View {
     }
     
     var body: some View {
+        // ZStack은 뷰를 겹쳐놓음
         ZStack {
             BadgeBackground()
             

@@ -11,6 +11,8 @@ struct BadgeSymbol: View {
     static let symbolColor = Color(red: 79.0 / 255, green: 79.0 / 255, blue: 191.0 / 255)
     
     var body: some View {
+        // 뷰를 동적으로 그리고, 위치 및 크기를 지정할 때 사용
+        // 하드코딩 사용을 하지 않기 위함
         GeometryReader { geometry in
             Path { path in
                 let width = min(geometry.size.width, geometry.size.height)
