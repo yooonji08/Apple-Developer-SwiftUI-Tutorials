@@ -26,7 +26,11 @@ struct HikeView: View {
                 Spacer()
 
                 Button {
-                    showDetail.toggle()
+                    // 버튼에 애니메이션 전환 효과 4초 적용
+                    // withAnimation(.easeInOut(duration: 4)) {}
+                    withAnimation {
+                        showDetail.toggle()
+                    }
                 } label: {
                     Label("Graph", systemImage: "chevron.right.circle")
                         .labelStyle(.iconOnly)
