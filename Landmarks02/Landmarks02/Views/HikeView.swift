@@ -31,8 +31,14 @@ struct HikeView: View {
                     Label("Graph", systemImage: "chevron.right.circle")
                         .labelStyle(.iconOnly)
                         .imageScale(.large)
+                        // 버튼을 클릭할 때, 버튼이 회전하도록 함
                         .rotationEffect(.degrees(showDetail ? 90 : 0))
+                        // 버튼이 회전할 때 에니메이션 적용x
+                        //.animation(nil, value: showDetail)
+                        .scaleEffect(showDetail ? 1.5 : 1)
                         .padding()
+                        // 버튼을 클릭할 때 애니메이션 추가
+                        //.animation(.spring(), value: showDetail)
                 }
             }
 
