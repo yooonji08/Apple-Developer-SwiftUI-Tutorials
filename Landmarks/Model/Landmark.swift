@@ -20,6 +20,14 @@ struct Landmark: Hashable, Codable, Identifiable {
     var description: String
     var isFavorite: Bool // 별 표시 o or x
     
+    // landmarkData.json파일에 있는 category속성의 값에 맞춰서 case문 작성
+    var category: Category
+    enum Category: String, CaseIterable, Codable {
+        case lakes = "Lakes"
+        case rivers = "Rivers"
+        case mountains = "Mountains"
+    }
+    
     // 이미지 변수
     private var imageName: String
     var image: Image {

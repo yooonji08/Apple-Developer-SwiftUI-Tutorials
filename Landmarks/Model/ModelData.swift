@@ -12,6 +12,15 @@ import Foundation
 class ModelData {
     var landmarks: [Landmark] = load("landmarkData.json")
     var hikes: [Hike] = load("hikeData.json")
+    
+    // MARK: Dictionary
+    // key-value, 값 정렬x - 배열을 print할 경우 출력이 뒤죽박죽, value 중복ok, 각 key-value의 자료형은 모두 같아야 함
+    var categories: [String: [Landmark]] {
+        Dictionary(
+            grouping: landmarks,
+            by: { $0.category.rawValue }
+        )
+    }
 }
 
 // 지정된 이름으로 JSON데이터를 가져오는 메서드
