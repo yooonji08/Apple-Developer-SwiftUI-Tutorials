@@ -19,6 +19,7 @@ struct Landmark: Hashable, Codable, Identifiable {
     var state: String
     var description: String
     var isFavorite: Bool // 별 표시 o or x
+    var isFeatured: Bool // 추천 랜드마크 o or x
     
     // landmarkData.json파일에 있는 category속성의 값에 맞춰서 case문 작성
     var category: Category

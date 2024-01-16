@@ -13,6 +13,11 @@ class ModelData {
     var landmarks: [Landmark] = load("landmarkData.json")
     var hikes: [Hike] = load("hikeData.json")
     
+    // 추천 랜드마크 보여주기
+    var features: [Landmark] {
+        landmarks.filter { $0.isFeatured }
+    }
+    
     // MARK: Dictionary
     // key-value, 값 정렬x - 배열을 print할 경우 출력이 뒤죽박죽, value 중복ok, 각 key-value의 자료형은 모두 같아야 함
     var categories: [String: [Landmark]] {
