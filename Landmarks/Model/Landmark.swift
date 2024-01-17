@@ -35,6 +35,11 @@ struct Landmark: Hashable, Codable, Identifiable {
         Image(imageName)
     }
     
+    // Featured에 보여질 이미지
+    var featureImage: Image? {
+        isFeatured ? Image(imageName + "_feature") : nil
+    }
+    
     // json데이터 구조를 반영하는 coordinates 사용
     private var coordinates: Coordinates
     
