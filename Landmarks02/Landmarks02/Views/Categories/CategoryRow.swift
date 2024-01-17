@@ -26,8 +26,10 @@ struct CategoryRow: View {
                 HStack(alignment: .top, spacing: 0) {
                     ForEach(items) { landmark in
                         NavigationLink {
+                            // 아이템의 세부 정보 페이지로 이동
                             LandmarkDetail(landmark: landmark)
                         } label: {
+                            // 해당 아이템을 누르면
                             CategoryItem(landmark: landmark)
                         }
                     }
