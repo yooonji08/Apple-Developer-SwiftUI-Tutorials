@@ -12,6 +12,7 @@ import Foundation
 class ModelData {
     var landmarks: [Landmark] = load("landmarkData.json")
     var hikes: [Hike] = load("hikeData.json")
+    var profile = Profile.default
     
     // 추천 랜드마크 보여주기
     var features: [Landmark] {
