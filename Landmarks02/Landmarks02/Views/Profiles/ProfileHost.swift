@@ -15,6 +15,13 @@ struct ProfileHost: View {
     var body: some View {
         VStack(alignment: .leading, spacing: 20) {
             HStack {
+                if editMode?.wrappedValue == .active {
+                    // 취소 버튼 추가
+                    Button("Cancel", role: .cancel) {
+                        draftProfile = modelData.profile // 프로필 편집 내용 저장x
+                        editMode?.animation().wrappedValue = .inactive
+                    }
+                }
                 Spacer()
                 EditButton() // edit 편집 버튼
             }
@@ -28,6 +35,14 @@ struct ProfileHost: View {
             // edit 화면인 경우
             else {
                 ProfileEditor(profile: $draftProfile)
+                    // 완료 버튼을 안 누른 경우, 프로필 업데이트 적용x
+                    .onAppear {
+                        draftProfile = modelData.profile
+                    }
+                    // 완료 버튼을 누른 경우 프로필 업데이트
+                    .onDisappear() {
+                        modelData.profile = draftProfile
+                    }
             }
         }
         .padding()
