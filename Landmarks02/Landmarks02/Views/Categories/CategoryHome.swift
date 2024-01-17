@@ -11,6 +11,7 @@ import SwiftUI
 struct CategoryHome: View {
     // self는 자기 자신(ModelData)을 가리키는 프로퍼티. ex. 안드로이드의 this
     @Environment(ModelData.self) var modelData
+    @State private var showingProfile = false
     
     var body: some View {
         NavigationSplitView {
@@ -30,7 +31,19 @@ struct CategoryHome: View {
                 // Lakes, Mountains에 있는 목록이 뷰에 꽉 차도록 만듦
                 .listRowInsets(EdgeInsets())
             }
+            .listStyle(.inset)
             .navigationTitle("Featured")
+            .toolbar {
+                Button {
+                    showingProfile.toggle()
+                } label: {
+                    Label("User Profile", systemImage: "person.crop.circle")
+                }
+            }
+            .sheet(isPresented: $showingProfile) {
+                ProfileHost()
+                    .environment(modelData)
+            }
         } detail: {
             Text("Select a Landmark")
         }
