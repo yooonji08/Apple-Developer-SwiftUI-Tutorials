@@ -16,6 +16,10 @@ struct CategoryHome: View {
     var body: some View {
         NavigationSplitView {
             List {
+                PageView(pages: modelData.features.map { FeatureCard(landmark: $0) })
+                    // 상단의 Featured에 있는 이미지가 뷰의 가장자리에 맞게 둥근 모서리가 적용되고, 뷰의 크기만큼 확대됨
+                    .listRowInsets(EdgeInsets())
+                /* 기존 코드
                 modelData.features[0].image
                     .resizable()
                     .scaledToFill()
@@ -23,6 +27,7 @@ struct CategoryHome: View {
                     .clipped()
                     // 상단의 Featured에 있는 이미지가 뷰의 가장자리에 맞게 둥근 모서리가 적용되고, 뷰의 크기만큼 확대됨
                     .listRowInsets(EdgeInsets())
+                 */
                 
                 ForEach(modelData.categories.keys.sorted(), id: \.self) { key in
                     // 카테고리의 각 행에 들어갈 목록 추가하기
