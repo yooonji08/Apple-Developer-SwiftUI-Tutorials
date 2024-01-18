@@ -10,8 +10,33 @@ import SwiftUI
 // ContentView: 가장 최상단 view
 // View: 화면에 그려질 뷰
 struct ContentView: View {
+    @StateObject private var journal = Journal()
+    
     // 다음과 같은 파일에서는(View를 사용하는 파일) body에 View 프로토콜을 사용
     var body: some View {
+        NavigationStack {
+            List(journal.entries) { entry in
+                NavigationLink(value: entry) {
+                    JournalEntryListItem(journalEntry: entry)
+                }
+            }
+            .navigationDestination(for: JournalEntry.self) { entry in
+                JournalEntryView(journalEntry: entry)
+            }
+            .navigationTitle("Journal")
+            .toolbar {
+                ToolbarItem {
+                    Button {
+                        journal.addSampleEntry()
+                    } label: {
+                        Image(systemName: "plus")
+                    }
+                }
+            }
+        }
+        
+        /*
+        // Exploring the structure of a SwiftUI app 파트 튜토리얼
         // VStack:
         // -> 수직 정렬(Vertical Stack), 주로 하위 뷰 수가 적을 때 사용
         // -> 반대 개념(HStack: 수평 정렬)
@@ -26,6 +51,7 @@ struct ContentView: View {
         }
         .padding() // 안쪽 여백 추가
         //.padding([.bottom, .trailing], 20) // 여백을 주고 싶은 곳에 여백 지정 가능
+         */
     }
 }
 
