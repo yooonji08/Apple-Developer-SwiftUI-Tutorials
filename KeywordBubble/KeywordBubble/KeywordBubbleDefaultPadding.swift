@@ -13,6 +13,8 @@ struct KeywordBubbleDefaultPadding: View {
     // keyword, symbol의 값을 쉽게 바꾸기 위한 값
     let keyword: String
     let symbol: String
+    // 텍스트의 크기에 비례하여 동적으로 크기를 조정(relativeTo에 title을 넣음으로써 텍스트 크기에 맞춰 동적으로 크기가 조정됨)
+    @ScaledMetric(relativeTo: .title) var paddingWidth = 24
     
     var body: some View {
         // 이모지와 텍스트를 함께 정렬
@@ -20,7 +22,8 @@ struct KeywordBubbleDefaultPadding: View {
         Label(keyword, systemImage: symbol)
             .font(.title) // 이모지와 텍스트에 모두 적용됨
             .foregroundStyle(.white)
-            .padding()
+            // 박스의 크기가 커져도, 이모지와 텍스트가 박스와 약간의 여백이 있도록 알아서 조정해줌
+            .padding(paddingWidth)
             // 박스의 스타일: Capsule(모서리가 둥근 직사각형), 투명한 보라색
             .background(.purple.opacity(0.75), in: Capsule())
     }
