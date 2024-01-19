@@ -26,11 +26,15 @@ struct KeywordBubbleDefaultPadding: View {
     }
 }
 
+// Preview 만들기
+// static을 꼭 붙여야만 preview가 나타남
+// PreviewProvider: 수동으로 preview 만들기
 struct KeywordBubbleDefaultPadding_Previews: PreviewProvider {
-    let keywords = ["chives", "fern-leaf lavender"]
-    var previews: some View {
+    static let keywords = ["chives", "fern-leaf lavender"]
+    static var previews: some View {
         VStack {
             ForEach(keywords, id: \.self) { word in
+                // keywords 배열에 있는 텍스트 값을 불러와서 뷰에 적용함
                 KeywordBubbleDefaultPadding(keyword: word, symbol: "leaf")
             }
         }
