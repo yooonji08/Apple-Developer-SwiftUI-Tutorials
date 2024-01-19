@@ -54,5 +54,11 @@ struct Captionedphoto_Previews: PreviewProvider {
         // preview를 여러개 만들기도 가능
         CaptionedPhoto(assetName: portraitName,
                        captionText: portraitCaption)
+        CaptionedPhoto(assetName: landscapeName,
+                       captionText: landscapeCaption)
+        .preferredColorScheme(.dark)
+        CaptionedPhoto(assetName: landscapeName,
+                       captionText: landscapeCaption)
+        .preferredColorScheme(.light)
     }
 }
