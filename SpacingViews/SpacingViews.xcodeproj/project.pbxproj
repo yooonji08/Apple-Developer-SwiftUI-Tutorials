@@ -13,6 +13,8 @@
 		E7896ADC2B5F87EC00240031 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E7896ADB2B5F87EC00240031 /* Preview Assets.xcassets */; };
 		E7896AE32B5F884E00240031 /* TrainCar.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7896AE22B5F884E00240031 /* TrainCar.swift */; };
 		E7896AE62B5F8A7900240031 /* DefaultSpacing.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7896AE52B5F8A7900240031 /* DefaultSpacing.swift */; };
+		E7896AE82B5F8D8900240031 /* SpecificSpacing.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7896AE72B5F8D8900240031 /* SpecificSpacing.swift */; };
+		E7896AEA2B5F8ED800240031 /* ScaledSpacing.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7896AE92B5F8ED800240031 /* ScaledSpacing.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,6 +25,8 @@
 		E7896ADB2B5F87EC00240031 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		E7896AE22B5F884E00240031 /* TrainCar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainCar.swift; sourceTree = "<group>"; };
 		E7896AE52B5F8A7900240031 /* DefaultSpacing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultSpacing.swift; sourceTree = "<group>"; };
+		E7896AE72B5F8D8900240031 /* SpecificSpacing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpecificSpacing.swift; sourceTree = "<group>"; };
+		E7896AE92B5F8ED800240031 /* ScaledSpacing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScaledSpacing.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,6 +81,8 @@
 			isa = PBXGroup;
 			children = (
 				E7896AE52B5F8A7900240031 /* DefaultSpacing.swift */,
+				E7896AE72B5F8D8900240031 /* SpecificSpacing.swift */,
+				E7896AE92B5F8ED800240031 /* ScaledSpacing.swift */,
 			);
 			path = Spacing;
 			sourceTree = "<group>";
@@ -153,8 +159,10 @@
 			files = (
 				E7896AE32B5F884E00240031 /* TrainCar.swift in Sources */,
 				E7896AE62B5F8A7900240031 /* DefaultSpacing.swift in Sources */,
+				E7896AE82B5F8D8900240031 /* SpecificSpacing.swift in Sources */,
 				E7896AD72B5F87E000240031 /* ContentView.swift in Sources */,
 				E7896AD52B5F87E000240031 /* SpacingViewsApp.swift in Sources */,
+				E7896AEA2B5F8ED800240031 /* ScaledSpacing.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
