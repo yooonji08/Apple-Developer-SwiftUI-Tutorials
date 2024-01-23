@@ -19,6 +19,9 @@
 		E7896AEF2B5F978A00240031 /* PaddingSomeEdges.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7896AEE2B5F978A00240031 /* PaddingSomeEdges.swift */; };
 		E7896AF12B5F985F00240031 /* SpecificPadding.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7896AF02B5F985F00240031 /* SpecificPadding.swift */; };
 		E7896AF32B5F9B3A00240031 /* PaddingTheContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7896AF22B5F9B3A00240031 /* PaddingTheContainer.swift */; };
+		E7896AF62B5F9D4700240031 /* AddingSpacer.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7896AF52B5F9D4700240031 /* AddingSpacer.swift */; };
+		E7896AF82B5F9E8A00240031 /* AddingPlaceholder.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7896AF72B5F9E8A00240031 /* AddingPlaceholder.swift */; };
+		E7896AFA2B5F9F5100240031 /* StackginPlaceholder.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7896AF92B5F9F5100240031 /* StackginPlaceholder.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,6 +38,9 @@
 		E7896AEE2B5F978A00240031 /* PaddingSomeEdges.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaddingSomeEdges.swift; sourceTree = "<group>"; };
 		E7896AF02B5F985F00240031 /* SpecificPadding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpecificPadding.swift; sourceTree = "<group>"; };
 		E7896AF22B5F9B3A00240031 /* PaddingTheContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaddingTheContainer.swift; sourceTree = "<group>"; };
+		E7896AF52B5F9D4700240031 /* AddingSpacer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddingSpacer.swift; sourceTree = "<group>"; };
+		E7896AF72B5F9E8A00240031 /* AddingPlaceholder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddingPlaceholder.swift; sourceTree = "<group>"; };
+		E7896AF92B5F9F5100240031 /* StackginPlaceholder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StackginPlaceholder.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,6 +73,7 @@
 		E7896AD32B5F87E000240031 /* SpacingViews */ = {
 			isa = PBXGroup;
 			children = (
+				E7896AF42B5F9D2900240031 /* AddingViews */,
 				E7896AEB2B5F971600240031 /* Padding */,
 				E7896AE42B5F8A6000240031 /* Spacing */,
 				E7896AD42B5F87E000240031 /* SpacingViewsApp.swift */,
@@ -105,6 +112,16 @@
 				E7896AF22B5F9B3A00240031 /* PaddingTheContainer.swift */,
 			);
 			path = Padding;
+			sourceTree = "<group>";
+		};
+		E7896AF42B5F9D2900240031 /* AddingViews */ = {
+			isa = PBXGroup;
+			children = (
+				E7896AF52B5F9D4700240031 /* AddingSpacer.swift */,
+				E7896AF72B5F9E8A00240031 /* AddingPlaceholder.swift */,
+				E7896AF92B5F9F5100240031 /* StackginPlaceholder.swift */,
+			);
+			path = AddingViews;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -179,12 +196,15 @@
 			files = (
 				E7896AE32B5F884E00240031 /* TrainCar.swift in Sources */,
 				E7896AE62B5F8A7900240031 /* DefaultSpacing.swift in Sources */,
+				E7896AFA2B5F9F5100240031 /* StackginPlaceholder.swift in Sources */,
 				E7896AE82B5F8D8900240031 /* SpecificSpacing.swift in Sources */,
 				E7896AD72B5F87E000240031 /* ContentView.swift in Sources */,
 				E7896AF12B5F985F00240031 /* SpecificPadding.swift in Sources */,
 				E7896AF32B5F9B3A00240031 /* PaddingTheContainer.swift in Sources */,
 				E7896AEF2B5F978A00240031 /* PaddingSomeEdges.swift in Sources */,
 				E7896AD52B5F87E000240031 /* SpacingViewsApp.swift in Sources */,
+				E7896AF82B5F9E8A00240031 /* AddingPlaceholder.swift in Sources */,
+				E7896AF62B5F9D4700240031 /* AddingSpacer.swift in Sources */,
 				E7896AEA2B5F8ED800240031 /* ScaledSpacing.swift in Sources */,
 				E7896AED2B5F972200240031 /* DefaultPadding.swift in Sources */,
 			);
