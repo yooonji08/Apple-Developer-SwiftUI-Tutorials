@@ -33,7 +33,3 @@ struct RecipeListItemView: View {
         }
     }
 }
-
-#Preview {
-    RecipeListItemView(recipe: Recipe.emptyRecipe())
-}

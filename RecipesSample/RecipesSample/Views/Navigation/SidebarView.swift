@@ -26,11 +26,31 @@ enum SidebarItem: Hashable {
 }
 
 struct SidebarView: View {
+    @Binding var selection: SidebarItem?
+    @ObservedObject var recipeBox: RecipeBox
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        List(selection: $selection) {
+            Section("Library") {
+                NavigationLink(value: SidebarItem.all) {
+                    Text(SidebarItem.all.title)
+                }
+                NavigationLink(value: SidebarItem.favorites) {
+                    Text(SidebarItem.favorites.title)
+                }
+                NavigationLink(value: SidebarItem.recents) {
+                    Text(SidebarItem.recents.title)
+                }
+            }
+            
+            Section("Collections") {
+                ForEach(recipeBox.collections, id: \.self) {
+                    collectionName in
+                    NavigationLink(value: SidebarItem.collection(collectionName)) {
+                        Text(collectionName)
+                    }
+                }
+            }
+        }
     }
-}
-
-#Preview {
-    SidebarView()
 }
