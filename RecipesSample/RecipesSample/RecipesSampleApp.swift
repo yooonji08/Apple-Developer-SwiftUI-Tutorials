@@ -15,6 +15,14 @@ struct RecipesSampleApp: App {
     
     var body: some Scene {
         WindowGroup {
+            NavigationSplitView {
+                SidebarView(selection: $selectedSidebarItem, recipeBox: recipeBox)
+            } content: {
+                ContentListView(selection: $selectedRecipeId, selectedSidebarItem: selectedSidebarItem ?? SidebarItem.all)
+            } detail: {
+                DetailView(recipeId: $selectedRecipeId)
+            }
+            .environmentObject(recipeBox)
         }
     }
 }
