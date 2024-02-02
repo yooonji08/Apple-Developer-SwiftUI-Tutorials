@@ -13,6 +13,7 @@
 		E738181A2B6CC470004B537C /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E73818192B6CC470004B537C /* Preview Assets.xcassets */; };
 		E73818222B6CC4BB004B537C /* LayingOutContainers.swift in Sources */ = {isa = PBXBuildFile; fileRef = E73818212B6CC4BB004B537C /* LayingOutContainers.swift */; };
 		E73818242B6CC6B8004B537C /* SizingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E73818232B6CC6B8004B537C /* SizingView.swift */; };
+		E73818262B6CCBBD004B537C /* AmazingAlignment.swift in Sources */ = {isa = PBXBuildFile; fileRef = E73818252B6CCBBD004B537C /* AmazingAlignment.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,6 +24,7 @@
 		E73818192B6CC470004B537C /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		E73818212B6CC4BB004B537C /* LayingOutContainers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LayingOutContainers.swift; sourceTree = "<group>"; };
 		E73818232B6CC6B8004B537C /* SizingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SizingView.swift; sourceTree = "<group>"; };
+		E73818252B6CCBBD004B537C /* AmazingAlignment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AmazingAlignment.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,6 +79,7 @@
 			children = (
 				E73818212B6CC4BB004B537C /* LayingOutContainers.swift */,
 				E73818232B6CC6B8004B537C /* SizingView.swift */,
+				E73818252B6CCBBD004B537C /* AmazingAlignment.swift */,
 			);
 			path = Challenges;
 			sourceTree = "<group>";
@@ -152,6 +155,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E73818152B6CC46F004B537C /* ContentView.swift in Sources */,
+				E73818262B6CCBBD004B537C /* AmazingAlignment.swift in Sources */,
 				E73818222B6CC4BB004B537C /* LayingOutContainers.swift in Sources */,
 				E73818242B6CC6B8004B537C /* SizingView.swift in Sources */,
 				E73818132B6CC46F004B537C /* JournalApp.swift in Sources */,
