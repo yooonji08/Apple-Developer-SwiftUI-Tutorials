@@ -15,6 +15,7 @@
 		E73818242B6CC6B8004B537C /* SizingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E73818232B6CC6B8004B537C /* SizingView.swift */; };
 		E73818262B6CCBBD004B537C /* AmazingAlignment.swift in Sources */ = {isa = PBXBuildFile; fileRef = E73818252B6CCBBD004B537C /* AmazingAlignment.swift */; };
 		E73818282B6CCF1B004B537C /* DebuggingViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = E73818272B6CCF1B004B537C /* DebuggingViews.swift */; };
+		E738182B2B6CD160004B537C /* MoodViewFull.swift in Sources */ = {isa = PBXBuildFile; fileRef = E738182A2B6CD160004B537C /* MoodViewFull.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,6 +28,7 @@
 		E73818232B6CC6B8004B537C /* SizingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SizingView.swift; sourceTree = "<group>"; };
 		E73818252B6CCBBD004B537C /* AmazingAlignment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AmazingAlignment.swift; sourceTree = "<group>"; };
 		E73818272B6CCF1B004B537C /* DebuggingViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DebuggingViews.swift; sourceTree = "<group>"; };
+		E738182A2B6CD160004B537C /* MoodViewFull.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoodViewFull.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +61,7 @@
 		E73818112B6CC46F004B537C /* Journal */ = {
 			isa = PBXGroup;
 			children = (
+				E73818292B6CD14F004B537C /* Cards */,
 				E73818202B6CC4A2004B537C /* Challenges */,
 				E73818122B6CC46F004B537C /* JournalApp.swift */,
 				E73818142B6CC46F004B537C /* ContentView.swift */,
@@ -85,6 +88,14 @@
 				E73818272B6CCF1B004B537C /* DebuggingViews.swift */,
 			);
 			path = Challenges;
+			sourceTree = "<group>";
+		};
+		E73818292B6CD14F004B537C /* Cards */ = {
+			isa = PBXGroup;
+			children = (
+				E738182A2B6CD160004B537C /* MoodViewFull.swift */,
+			);
+			path = Cards;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -159,6 +170,7 @@
 			files = (
 				E73818152B6CC46F004B537C /* ContentView.swift in Sources */,
 				E73818282B6CCF1B004B537C /* DebuggingViews.swift in Sources */,
+				E738182B2B6CD160004B537C /* MoodViewFull.swift in Sources */,
 				E73818262B6CCBBD004B537C /* AmazingAlignment.swift in Sources */,
 				E73818222B6CC4BB004B537C /* LayingOutContainers.swift in Sources */,
 				E73818242B6CC6B8004B537C /* SizingView.swift in Sources */,
