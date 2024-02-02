@@ -14,6 +14,7 @@
 		E73818222B6CC4BB004B537C /* LayingOutContainers.swift in Sources */ = {isa = PBXBuildFile; fileRef = E73818212B6CC4BB004B537C /* LayingOutContainers.swift */; };
 		E73818242B6CC6B8004B537C /* SizingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E73818232B6CC6B8004B537C /* SizingView.swift */; };
 		E73818262B6CCBBD004B537C /* AmazingAlignment.swift in Sources */ = {isa = PBXBuildFile; fileRef = E73818252B6CCBBD004B537C /* AmazingAlignment.swift */; };
+		E73818282B6CCF1B004B537C /* DebuggingViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = E73818272B6CCF1B004B537C /* DebuggingViews.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,6 +26,7 @@
 		E73818212B6CC4BB004B537C /* LayingOutContainers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LayingOutContainers.swift; sourceTree = "<group>"; };
 		E73818232B6CC6B8004B537C /* SizingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SizingView.swift; sourceTree = "<group>"; };
 		E73818252B6CCBBD004B537C /* AmazingAlignment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AmazingAlignment.swift; sourceTree = "<group>"; };
+		E73818272B6CCF1B004B537C /* DebuggingViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DebuggingViews.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,6 +82,7 @@
 				E73818212B6CC4BB004B537C /* LayingOutContainers.swift */,
 				E73818232B6CC6B8004B537C /* SizingView.swift */,
 				E73818252B6CCBBD004B537C /* AmazingAlignment.swift */,
+				E73818272B6CCF1B004B537C /* DebuggingViews.swift */,
 			);
 			path = Challenges;
 			sourceTree = "<group>";
@@ -155,6 +158,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E73818152B6CC46F004B537C /* ContentView.swift in Sources */,
+				E73818282B6CCF1B004B537C /* DebuggingViews.swift in Sources */,
 				E73818262B6CCBBD004B537C /* AmazingAlignment.swift in Sources */,
 				E73818222B6CC4BB004B537C /* LayingOutContainers.swift in Sources */,
 				E73818242B6CC6B8004B537C /* SizingView.swift in Sources */,
